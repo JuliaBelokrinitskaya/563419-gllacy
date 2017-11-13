@@ -28,9 +28,9 @@
         </ul>
 
         <div class="site-actions">
-          <span class="site-actions-search">Поиск</span>
-          <span class="site-actions-login">Вход</span>
-          <span class="site-actions-cart"><span>Корзина: </span>2 товара</span>
+          <a class="site-actions-search" href="#">Поиск</a>
+          <a class="site-actions-login" href="#">Вход</a>
+          <a class="site-actions-cart" href="#"><span class="visually-hidden">Корзина: </span>2 товара</a>
         </div>
       </nav>
 
@@ -51,7 +51,93 @@
 
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="filter-row">
+            <p>
+              <label for="filter-order">Сортировка:</label>
+              <select id="filter-order" name="order">
+                <option value="popular">по популярности</option>
+                <option value="price-asc">сначала недорогие</option>
+                <option value="price-desc">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+            </p>
+
+            <fieldset class="price">
+              <legend>Цена: 100 руб. – 500 руб.</legend>
+              <label class="visually-hidden">
+                Минимальная цена
+                <input  type="number" name="min-price" value="100">
+                руб.
+              </label>
+              <div class="price-range">
+                <div class="price-range-selected"></div>
+                <button class="price-min" type="button">от</button>
+                <button class="price-max" type="button">до</button>
+              </div>
+              <label class="visually-hidden">
+                Максимальная цена
+                <input  type="number" name="max-price" value="500">
+                руб.
+              </label>
+            </fieldset>
+
+            <fieldset class="fat">
+              <legend>Жирность:</legend>
+              <label class="filter-radio">
+                <input class="visually-hidden" type="radio" name="fat" value="0">
+                <span class="radio-indicator"></span>
+                0%
+              </label>
+              <label class="filter-radio">
+                <input class="visually-hidden" type="radio" name="fat" value="<10" checked>
+                <span class="radio-indicator"></span>
+                до 10%
+              </label>
+              <label class="filter-radio">
+                <input class="visually-hidden" type="radio" name="fat" value="10-30">
+                <span class="radio-indicator"></span>
+                до 30%
+              </label>
+              <label class="filter-radio">
+                <input class="visually-hidden" type="radio" name="fat" value=">30">
+                <span class="radio-indicator"></span>
+                выше 30%
+              </label>
+            </fieldset>
+          </div>
+          <div class="filter-row">
+            <fieldset class="fillers">
+              <legend>Наполнители:</legend>
+              <label class="filter-checkbox">
+                <input class="visually-hidden" type="checkbox" name="chocolate" checked>
+                <span class="checkbox-indicator"></span>
+                шоколадные
+              </label>
+              <label class="filter-checkbox">
+                <input class="visually-hidden" type="checkbox" name="sugar-dressings" checked>
+                <span class="checkbox-indicator"></span>
+                сахарные присыпки
+              </label>
+              <label class="filter-checkbox">
+                <input class="visually-hidden" type="checkbox" name="fruit">
+                <span class="checkbox-indicator"></span>
+                фрукты
+              </label>
+              <label class="filter-checkbox">
+                <input class="visually-hidden" type="checkbox" name="syrups">
+                <span class="checkbox-indicator"></span>
+                сиропы
+              </label>
+              <label class="filter-checkbox">
+                <input class="visually-hidden" type="checkbox" name="jams">
+                <span class="checkbox-indicator"></span>
+                джемы
+              </label>
+            </fieldset>
+            <button class="filter-button" type="submit">Применить</button>
+          </div>
+        </form>
       </section>
 
       <section class="products">
@@ -235,14 +321,32 @@
 
     <section class="dropdown dropdown-search">
       <h2 class="visually-hidden">Поиск</h2>
-      <!-- Здесь будет форма -->
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+        <p>
+          <label class="visually-hidden" for="search-query">Что ищем?</label>
+          <input id="search-query" type="text" name="query" placeholder="Что ищем?">
+        </p>
+        <button class="visually-hidden" type="submit">Найти</button>
+      </form>
     </section>
 
     <section class="dropdown dropdown-login">
       <h2 class="visually-hidden">Личный кабинет</h2>
-      <!-- Здесь будет форма -->
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="login-email">Электронная почта</label>
+          <input id="login-email" type="email" name="email" placeholder="Электронная почта">
+        </p>
+        <p>
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input id="login-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <p class="login-links">
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </p>
     </section>
 
     <section class="dropdown dropdown-cart">
@@ -250,14 +354,14 @@
       <table class="cart">
         <tbody>
           <tr>
-            <td><span class="delete-item">Удалить</span></td>
+            <td><button class="delete-item" type="button">Удалить</button></td>
             <td><img src="img/product-1.jpg" width="33" height="33" alt="Превью товара"></td>
             <td>Пломбир с апельсиновым джемом</td>
             <td>1,5 кг х <span class="price">200 руб.</span></td>
             <td>300 руб.</td>
           </tr>
           <tr>
-            <td><span class="delete-item">Удалить</span></td>
+            <td><button class="delete-item" type="button">Удалить</button></td>
             <td><img src="img/product-3.jpg" width="33" height="33" alt="Превью товара"></td>
             <td>Клубничный пломбир с присыпкой из белого шоколада</td>
             <td>1,5 кг х <span class="price">200 руб.</span></td>
