@@ -28,9 +28,9 @@
         </ul>
 
         <div class="site-actions">
-          <span class="site-actions-search">Поиск</span>
-          <span class="site-actions-login">Вход</span>
-          <span class="site-actions-cart-empty"><span>Корзина: </span>Пусто</span>
+          <a class="site-actions-search" href="#">Поиск</a>
+          <a class="site-actions-login" href="#">Вход</a>
+          <a class="site-actions-cart-empty"><span class="visually-hidden">Корзина: </span>Пусто</a>
         </div>
       </nav>
 
@@ -78,9 +78,18 @@
         </article>
 
         <ul class="slider-navigation">
-          <li><span class="slider-navigation-current"></span></li>
-          <li><span></span></li>
-          <li><span></span></li>
+          <li>
+            <input class="visually-hidden" id="slider-switch-1" type="radio" name="slider-switch" checked>
+            <label for="slider-switch-1">1</label>
+          </li>
+          <li>
+            <input class="visually-hidden" id="slider-switch-2" type="radio" name="slider-switch">
+            <label for="slider-switch-2">2</label>
+          </li>
+          <li>
+            <input class="visually-hidden" id="slider-switch-3" type="radio" name="slider-switch">
+            <label for="slider-switch-3">3</label>
+          </li>
         </ul>
       </section>
 
@@ -174,7 +183,13 @@
       <section class="subscription">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-        <!-- Здесь будет форма -->
+        <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="subscription-email">Электронная почта</label>
+            <input id="subscription-email" type="email" name="email" placeholder="Электронная почта">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
       </section>
 
       <section class="map">
@@ -230,21 +245,53 @@
 
     <section class="dropdown dropdown-search">
       <h2 class="visually-hidden">Поиск</h2>
-      <!-- Здесь будет форма -->
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+        <p>
+          <label class="visually-hidden" for="search-query">Что ищем?</label>
+          <input id="search-query" type="text" name="query" placeholder="Что ищем?">
+        </p>
+        <button class="visually-hidden" type="submit">Найти</button>
+      </form>
     </section>
 
     <section class="dropdown dropdown-login">
       <h2 class="visually-hidden">Личный кабинет</h2>
-      <!-- Здесь будет форма -->
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="login-email">Электронная почта</label>
+          <input id="login-email" type="email" name="email" placeholder="Электронная почта">
+        </p>
+        <p>
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input id="login-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <p class="login-links">
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </p>
     </section>
 
     <section class="modal modal-feedback">
       <h2>Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
+          <input id="feedback-name" type="text" name="name" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
+          <input id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-message">Напишите что-нибудь...</label>
+          <textarea id="feedback-message" name="message" placeholder="Напишите что-нибудь..."></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
