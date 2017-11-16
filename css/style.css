@@ -11,6 +11,24 @@ body {
   background-color: #849d8f;
 }
 
+body.main-page-1 {
+  background-color: #849d8f;
+}
+
+body.main-page-2 {
+  background-color: #8996a6;
+}
+
+body.main-page-3 {
+  background-color: #9d8b84;
+}
+
+body.inner-page {
+  background-image: url("../img/background.png");
+  background-position: 0 0;
+  background-repeat: repeat-x;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -442,6 +460,14 @@ a:active {
   line-height: 24px;
   font-weight: 700;
 }
+
+
+
+
+
+
+
+
 
 .main-footer {
   font-weight: 400;
