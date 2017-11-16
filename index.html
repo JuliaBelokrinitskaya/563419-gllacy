@@ -89,7 +89,7 @@
 
       <section class="promotions">
         <h2 class="visually-hidden">Специальные предложения</h2>
-        <ul class="promotions-list">
+        <ul class="promotion-list">
           <li class="promotion-item">
             <article class="bonus-raspberries">
               <h3>Малинка даром!</h3>
@@ -175,15 +175,17 @@
       </article>
 
       <section class="subscription">
-        <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-        <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label class="visually-hidden" for="subscription-email">Электронная почта</label>
-            <input id="subscription-email" type="email" name="email" placeholder="Электронная почта">
-          </p>
-          <button class="button" type="submit">Отправить</button>
-        </form>
+        <div class="container">
+          <h2 class="visually-hidden">Подписка на рассылку</h2>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+          <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label class="visually-hidden" for="subscription-email">Электронная почта</label>
+              <input class="input text-input" id="subscription-email" type="email" name="email" placeholder="Электронная почта">
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
 
       <section class="map">
@@ -199,8 +201,8 @@
             <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
           </p>
           <p>
-            Для заказов по телефону:
-            <b>8 812 450-25-25</b>
+            Для заказов по телефону:<br>
+            <b>8 812 450-25-25</b><br>
             (с 10 до 20 ежедневно)
           </p>
           <a class="button" href="#">Форма обратной связи</a>
@@ -210,11 +212,11 @@
 
     <footer class="main-footer">
       <div class="footer-social">
-        <ul>
-          <li><a class="social-btn" href="#">Твиттер</a></li>
-          <li><a class="social-btn" href="#">Инстаграм</a></li>
-          <li><a class="social-btn" href="#">Фейсбук</a></li>
-          <li><a class="social-btn" href="#">Вконтакте</a></li>
+        <ul class="social-buttons">
+          <li><a class="social-button" href="#">Твиттер</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Вконтакте</a></li>
         </ul>
       </div>
 
@@ -242,7 +244,7 @@
       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
         <p>
           <label class="visually-hidden" for="search-query">Что ищем?</label>
-          <input id="search-query" type="text" name="query" placeholder="Что ищем?">
+          <input class="input text-input" id="search-query" type="text" name="query" placeholder="Что ищем?">
         </p>
         <button class="visually-hidden" type="submit">Найти</button>
       </form>
@@ -253,11 +255,11 @@
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="login-email">Электронная почта</label>
-          <input id="login-email" type="email" name="email" placeholder="Электронная почта">
+          <input class="input text-input" id="login-email" type="email" name="email" placeholder="Электронная почта">
         </p>
         <p>
           <label class="visually-hidden" for="login-password">Пароль</label>
-          <input id="login-password" type="password" name="password" placeholder="Пароль">
+          <input class="input text-input" id="login-password" type="password" name="password" placeholder="Пароль">
         </p>
         <button class="button" type="submit">Войти</button>
       </form>
@@ -268,20 +270,20 @@
     </section>
 
     <section class="modal modal-feedback">
-      <h2>Форма обратной связи</h2>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-          <input id="feedback-name" type="text" name="name" placeholder="Как вас зовут?">
+          <input class="input text-input" id="feedback-name" type="text" name="name" placeholder="Как вас зовут?">
         </p>
         <p>
           <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
-          <input id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+          <input class="input text-input" id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
         </p>
         <p>
           <label class="visually-hidden" for="feedback-message">Напишите что-нибудь...</label>
-          <textarea id="feedback-message" name="message" placeholder="Напишите что-нибудь..."></textarea>
+          <textarea class="input text-input" id="feedback-message" name="message" placeholder="Напишите что-нибудь..."></textarea>
         </p>
         <button class="button" type="submit">Отправить</button>
       </form>
