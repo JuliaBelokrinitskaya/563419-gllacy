@@ -603,8 +603,8 @@ a {
   opacity: 0.2;
 }
 
-.inner-page .container {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+.inner-page .main-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-footer {
