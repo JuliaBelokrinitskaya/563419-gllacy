@@ -237,7 +237,7 @@
               <section class="subscription column-2">
                 <div class="subscription-wrapper">
                   <h2 class="visually-hidden">Подписка на рассылку</h2>
-                  <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+                  <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                   <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
                     <p>
                       <label class="visually-hidden" for="subscription-email">Электронная почта</label>
@@ -302,26 +302,28 @@
         </footer>
       </div>
 
-      <section class="modal modal-feedback">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <p class="modal-text">Мы обязательно вам ответим!</p>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-            <input class="input text-input" id="feedback-name" type="text" name="name" placeholder="Как вас зовут?">
-          </p>
-          <p>
-            <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
-            <input class="input text-input" id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
-          </p>
-          <p>
-            <label class="visually-hidden" for="feedback-message">Напишите что-нибудь...</label>
-            <textarea class="input text-input" id="feedback-message" name="message" placeholder="Напишите что-нибудь..."></textarea>
-          </p>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-        <button class="modal-close" type="button">Закрыть</button>
-      </section>
+      <div class="modal-wrapper">
+        <section class="modal modal-feedback">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
+          <p class="modal-text">Мы обязательно вам ответим!</p>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
+              <input class="input text-input" id="feedback-name" type="text" name="name" placeholder="Как вас зовут?">
+            </p>
+            <p>
+              <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
+              <input class="input text-input" id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+            </p>
+            <p>
+              <label class="visually-hidden" for="feedback-message">Напишите что-нибудь...</label>
+              <textarea class="input text-input" id="feedback-message" name="message" cols="40" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+          <button class="modal-close" type="button">Закрыть</button>
+        </section>
+      </div>
     </div>
   </body>
 </html>
